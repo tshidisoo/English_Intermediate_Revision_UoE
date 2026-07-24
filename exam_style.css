@@ -1,0 +1,95 @@
+:root {
+  --green: #14532d;
+  --green-light: #e7f0e9;
+  --grey: #666;
+  --border: #cfd8d2;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  background: #f4f6f5;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0 0 60px 0;
+  line-height: 1.5;
+}
+.wrap { max-width: 820px; margin: 0 auto; padding: 20px 16px; }
+.headerbox {
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  padding: 16px 20px;
+  background: #fff;
+  margin-bottom: 18px;
+}
+.headerbox h1 { color: var(--green); text-align: center; font-size: 1.4rem; margin: 0 0 2px 0; }
+.headerbox .sub { text-align: center; color: #444; font-size: .95rem; margin-bottom: 12px; }
+.field-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+.field-row label { flex: 1 1 220px; font-size: .9rem; color: #333; }
+.field-row input[type=text] {
+  width: 100%; padding: 8px 10px; margin-top: 4px;
+  border: 1px solid var(--border); border-radius: 5px; font-size: .95rem;
+}
+.notice {
+  background: #fff8e1; border: 1px solid #f0d98c; border-radius: 6px;
+  padding: 10px 14px; font-size: .9rem; margin-bottom: 18px; color: #5c4a00;
+}
+h2.section {
+  background: var(--green); color: #fff; padding: 10px 14px;
+  border-radius: 6px; font-size: 1.1rem; margin: 26px 0 10px 0;
+}
+.instructions { font-style: italic; color: #444; font-size: .88rem; margin-bottom: 12px; }
+h3.sub {
+  background: var(--green-light); border-left: 4px solid var(--green);
+  padding: 8px 12px; font-size: 1rem; margin: 16px 0 10px 0; border-radius: 3px;
+}
+.card {
+  background: #fff; border: 1px solid var(--border); border-radius: 8px;
+  padding: 14px 16px; margin-bottom: 12px;
+}
+.qtext { font-weight: 600; margin-bottom: 8px; }
+.options { display: flex; flex-direction: column; gap: 6px; }
+.options.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; }
+.opt {
+  display: flex; align-items: flex-start; gap: 8px; padding: 6px 8px;
+  border-radius: 5px; cursor: pointer; font-size: .92rem;
+}
+.opt:hover { background: #f0f4f1; }
+.opt input { margin-top: 3px; flex-shrink: 0; }
+.opt.answered { background: #eaf3ec; }
+.para-title { font-weight: 700; text-align: center; margin: 4px 0 8px 0; }
+.para-text { text-align: justify; background: #fbfbf9; border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; margin-bottom: 12px; }
+.blank-badge {
+  display: inline-block; background: var(--green); color: #fff; font-weight: 700;
+  font-size: .78rem; border-radius: 10px; padding: 1px 7px; margin: 0 1px;
+}
+.passage-box {
+  background: #fbfbf9; border: 1px solid var(--border); border-radius: 6px;
+  padding: 12px 14px; text-align: justify; margin-bottom: 14px; font-size: .95rem;
+}
+.titleblank { text-align: center; font-weight: 700; margin-bottom: 10px; }
+.mcq-mini { font-size: .88rem; margin: 4px 0; }
+.mcq-mini b { color: var(--green); }
+
+.audio-card { background: #f0f6f2; border: 1px solid var(--green); text-align: center; }
+.audio-label { font-weight: 600; color: var(--green); margin-bottom: 8px; font-size: .95rem; }
+.audio-card audio { width: 100%; max-width: 480px; }
+
+.submit-bar { text-align: center; margin: 30px 0; }
+button#submitBtn {
+  background: var(--green); color: #fff; border: none; padding: 14px 34px;
+  font-size: 1.05rem; border-radius: 8px; cursor: pointer; font-weight: 600;
+}
+button#submitBtn:disabled { opacity: .6; cursor: not-allowed; }
+button#submitBtn:hover:not(:disabled) { background: #0d3a20; }
+
+.missing { outline: 2px solid #c0392b; }
+.results-panel {
+  display: none; background: #fff; border: 2px solid var(--green); border-radius: 10px;
+  padding: 22px; text-align: center; margin: 24px 0;
+}
+.results-panel .score { font-size: 2.2rem; font-weight: 800; color: var(--green); }
+.results-panel .pct { font-size: 1.1rem; color: #333; margin-top: 4px; }
+.status-msg { margin-top: 14px; font-size: .92rem; }
+.status-msg.ok { color: #14532d; }
+.status-msg.err { color: #a33; }
+.progress-note { text-align: center; color: var(--grey); font-size: .85rem; margin-top: -6px; margin-bottom: 10px; }
